@@ -7,13 +7,17 @@
 class PhoneBook {
 
 private:
+
 	Contact _contacts[8];
+	int		_nextContact;
 
 public:
+
 	PhoneBook(void);
 	~PhoneBook(void);
 
-	void	Search(void) const;
+	void	search() const;
+	void	addContact();
 
 };
 

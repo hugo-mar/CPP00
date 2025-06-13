@@ -9,17 +9,19 @@ private:
 
 	std::string	_firstName;
 	std::string	_lastName;
-	std::string	_nickName;
+	std::string	_nickname;
 	std::string	_phoneNumber;
 	std::string	_darkestSecret;
+	bool		_isActive;
 
 public:
 
 	Contact	(void);
 	~Contact (void);
 
-	void	setContact(void);
-	void	getContactInfo(std::string &info) const;
+	void		setContact(void);
+	std::string	getContactInfo(int field) const;
+	bool		isActive(void) const;
 
 };
 

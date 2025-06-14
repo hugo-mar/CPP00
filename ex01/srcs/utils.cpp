@@ -6,7 +6,7 @@
 /*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 17:59:31 by hugo-mar          #+#    #+#             */
-/*   Updated: 2025/06/14 20:50:39 by hugo-mar         ###   ########.fr       */
+/*   Updated: 2025/06/14 23:16:31 by hugo-mar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,10 @@ static std::string stripAccents(const std::string& s)
 
         if (base)									// acento foi removido
             out.push_back(base);
-        else if (wc < 128)
-            out.push_back(static_cast<char>(wc));	// já é ASCII
-        else
-            out.push_back('?');						// carácter fora da tabela
+        else if (wc < 128)							// já era ASCII
+            out.push_back(static_cast<char>(wc));
+        else										// carácter fora da tabela ASCII
+            out.push_back('?');
 
         p += n;
         left -= n;

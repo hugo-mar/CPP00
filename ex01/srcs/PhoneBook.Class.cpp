@@ -6,7 +6,7 @@
 /*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 17:59:51 by hugo-mar          #+#    #+#             */
-/*   Updated: 2025/06/14 20:51:01 by hugo-mar         ###   ########.fr       */
+/*   Updated: 2025/06/14 23:21:07 by hugo-mar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "PhoneBook.Class.hpp"
 #include "utils.hpp"
 
-PhoneBook::PhoneBook(void) : _nextContact{0}{
+PhoneBook::PhoneBook(void) : _nextContact(0){
 }
 
 PhoneBook::~PhoneBook(void){

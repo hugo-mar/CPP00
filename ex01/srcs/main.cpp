@@ -6,7 +6,7 @@
 /*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 17:59:15 by hugo-mar          #+#    #+#             */
-/*   Updated: 2025/06/14 20:50:24 by hugo-mar         ###   ########.fr       */
+/*   Updated: 2025/06/14 23:20:27 by hugo-mar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main()
 {
 	PhoneBook	pb;
-	std::string	command {};
+	std::string	command;
 	
 	setlocale(LC_CTYPE, "");
 

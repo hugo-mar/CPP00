@@ -1,22 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/14 17:59:15 by hugo-mar          #+#    #+#             */
+/*   Updated: 2025/06/14 20:50:24 by hugo-mar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.Class.hpp"
 #include "PhoneBook.Class.hpp"
-
-#include <iostream>
-#include <string>
-
-#include <limits>
-
-
-void	ignoreLine();
-
+#include "utils.hpp"
 
 int main()
 {
-	PhoneBook pb;
+	PhoneBook	pb;
 	std::string	command {};
+	
+	setlocale(LC_CTYPE, "");
 
-	std::cout << "Welcome to the crappy awesome phonebook!\n";
-	std::cout << "The deal is contacts.\n";
+	std::cout << "\nWelcome to the crappy awesome phonebook!\n";
+	std::cout << "The deal is contacts.\n\n";
 
 	while (true)
 	{
@@ -30,22 +36,9 @@ int main()
 		else if (command == "EXIT" || command == "exit")
 			break ;
 		else
-			std::cout << "That ain't happening. ";
+			std::cout << "\nThat ain't happening. ";
 	}
 
+	std::cout << "Hope it was as good for you as it was for me.\n\n";
 	return 0;
-
 }
-
-
-
-// #include <algorithm>
-// #include <cctype>
-// #include <string>
-
-// char toUpperChar(unsigned char c) {
-//     return std::toupper(c);
-// }
-
-// std::string str = "example";
-// std::transform(str.begin(), str.end(), str.begin(), toUpperChar);

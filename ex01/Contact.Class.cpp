@@ -1,7 +1,17 @@
-#include <iostream>
-#include <string>
-#include <limits>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.Class.cpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/14 18:00:07 by hugo-mar          #+#    #+#             */
+/*   Updated: 2025/06/14 20:51:15 by hugo-mar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.Class.hpp"
+#include "utils.hpp"
 
 Contact::Contact(void) : _isActive(false) {
 }
@@ -9,14 +19,9 @@ Contact::Contact(void) : _isActive(false) {
 Contact::~Contact(void){
 }
 
-void	ignoreLine()
-{
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}
-
 void	Contact::setContact(void)
 {
-	std::cout << "First name: ";
+	std::cout << "\nFirst name: ";
 	std::cin >> this->_firstName;
 	ignoreLine();
 
@@ -36,6 +41,7 @@ void	Contact::setContact(void)
 	std::cin >> this->_darkestSecret;
 	ignoreLine();
 
+	std::cout << '\n';
 	this->_isActive = true;
 }
 

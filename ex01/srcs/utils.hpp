@@ -6,12 +6,12 @@
 /*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 17:59:41 by hugo-mar          #+#    #+#             */
-/*   Updated: 2025/06/14 19:54:32 by hugo-mar         ###   ########.fr       */
+/*   Updated: 2025/06/15 14:26:41 by hugo-mar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#ifndef UTILS_HPP
+# define UTILS_HPP
 
 # include <iostream>
 # include <limits>

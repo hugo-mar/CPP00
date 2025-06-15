@@ -6,12 +6,12 @@
 /*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 18:00:15 by hugo-mar          #+#    #+#             */
-/*   Updated: 2025/06/14 20:51:21 by hugo-mar         ###   ########.fr       */
+/*   Updated: 2025/06/15 14:26:06 by hugo-mar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_CLASS_H
-# define CONTACT_CLASS_H
+#ifndef CONTACT_CLASS_HPP
+# define CONTACT_CLASS_HPP
 
 # include <string>
 

@@ -12,8 +12,8 @@
 
 #include "utils.hpp"
 
-void	ignoreLine()
-{
+void	ignoreLine() {
+
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
@@ -37,8 +37,8 @@ int	getIdx()
 	return idx;
 }
 
-static char deaccent(wchar_t wc)
-{
+static char deaccent(wchar_t wc) {
+
     switch (wc)
     {
         case L'á': case L'à': case L'â': case L'ã': return 'a';
@@ -59,20 +59,20 @@ static char deaccent(wchar_t wc)
     }
 }
 
-static std::string stripAccents(const std::string& s)
-{
+static std::string stripAccents(const std::string& s) {
+
     std::string 	out;
     const char*		p = s.c_str();
     std::size_t		left = s.size();
     wchar_t			wc;
 
-    mbtowc(NULL, NULL, 0);							// reseta estado
+    mbtowc(NULL, NULL, 0);
 
     while (left)
     {
         int n = mbtowc(&wc, p, left);
 
-        if (n <= 0)									// em caso de falha
+        if (n <= 0)
 		{
             out.push_back(*p);
             ++p;
@@ -83,11 +83,11 @@ static std::string stripAccents(const std::string& s)
 
         char base = deaccent(wc);
 
-        if (base)									// acento foi removido
+        if (base)
             out.push_back(base);
-        else if (wc < 128)							// já era ASCII
+        else if (wc < 128)
             out.push_back(static_cast<char>(wc));
-        else										// carácter fora da tabela ASCII
+        else
             out.push_back('?');
 
         p += n;
@@ -97,8 +97,8 @@ static std::string stripAccents(const std::string& s)
     return out;
 }
 
-void printField(const std::string& field, char lastChar)
-{
+void    printField(const std::string& field, char lastChar) {
+
     std::string clean = stripAccents(field);
 
 	std::string display = (clean.length() >= 10) ? clean.substr(0, 9) + '.' : clean;

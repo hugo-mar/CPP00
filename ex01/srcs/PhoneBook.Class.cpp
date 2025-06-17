@@ -14,14 +14,16 @@
 #include "PhoneBook.Class.hpp"
 #include "utils.hpp"
 
-PhoneBook::PhoneBook(void) : _nextContact(0){
+PhoneBook::PhoneBook(void) : _nextContact(0) {
+
 }
 
-PhoneBook::~PhoneBook(void){
+PhoneBook::~PhoneBook(void) {
+
 }
 
-void	PhoneBook::printContactinfo(int idx) const
-{
+void	PhoneBook::printContactinfo(int idx) const {
+
 	if (_contacts[idx].isActive())
 	{
 		std::cout << "\nFirst name: " << _contacts[idx].getContactInfo(0) << '\n';
@@ -37,8 +39,8 @@ void	PhoneBook::printContactinfo(int idx) const
 	}
 }
 
-void	PhoneBook::search() const
-{
+void	PhoneBook::search() const {
+
 	const int	CAPACITY = sizeof(_contacts) / sizeof(_contacts[0]);
 	bool		emptyPhoneBook = true ;
 	
@@ -58,13 +60,13 @@ void	PhoneBook::search() const
 		}
 	}
 	if (emptyPhoneBook)
-		std::cout << "! There's no life in here...                |\n";
+		std::cout << "| There's no life in here...                |\n";
 	std::cout << "+----------+----------+----------+----------+\n\n";
 	if (!emptyPhoneBook)
 		printContactinfo(getIdx() - 1);
 }
 
-void	PhoneBook::addContact(){
+void	PhoneBook::addContact() {
 
 	this->_contacts[_nextContact].setContact();
 	this->_nextContact = (_nextContact + 1) % 8;
